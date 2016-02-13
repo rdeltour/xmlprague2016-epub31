@@ -1,0 +1,373 @@
+@import "normalizecss/normalize";
+// @import "prism/themes/prism-okaidia";
+// @import "bespoke-substeps/style";
+@import "fonts";
+@import "timeline";
+
+.bespoke-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.bespoke-scale-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+.bespoke-scale-parent .bespoke-active {
+  pointer-events: auto;
+}
+.bespoke-slide {
+  width: 640px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -320px;
+  margin-top: -240px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.bespoke-inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+.bespoke-bullet-inactive {
+  opacity: 0;
+  pointer-events: none;
+}
+.bespoke-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.bespoke-backdrop-active {
+  opacity: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bespoke-progress-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0.3vw;
+}
+.bespoke-progress-bar {
+  position: absolute;
+  height: 100%;
+  background: #ccc;
+  -webkit-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+.emphatic {
+  background: #222;
+}
+.emphatic-text {
+  color: #fff;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,b {
+  font-family: 'Bree Serif', 'Open Sans Bold', sans-serif;
+  color: #F25F5C;
+}
+b {
+  font-family: 'Open Sans Bold', sans-serif;
+  color: #247BA0;
+}
+
+blockquote, .important {
+ font-family: 'Open Sans Semi-Bold', sans-serif;  
+ color: #50514F;
+}
+
+p,
+blockquote {
+  max-width: 60%;
+}
+
+blockquote {
+  line-height: 1.6em;
+  padding: 2em;
+  background-color: rgba(109,194,179,0.5);
+  border-radius: 10px;
+  margin-bottom: 2em;
+  &:before {
+    content: '“';
+    font-size: 3em;
+    margin-right: 0.3em;
+    vertical-align: -0.4em;
+    color: #7e7785;
+  }
+  &:after {
+    content: '”';
+    font-size: 3em;
+    margin-left: 0.3em;
+    vertical-align: -0.4em;
+    color: #7e7785;
+  }
+}
+
+
+li {
+  line-height: 1.8em;
+}
+
+a {
+  color: #8EA700;
+  display: block;
+  line-height: 1.2;
+  
+  &:visited {
+    color: #8EA700;
+  }
+  &:hover, &:focus {
+    color: #F25F5C;
+  }
+}
+
+code {
+  color: #247BA0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.list--main, .list--unstyled {
+  list-style-type: none;
+  padding: 0;
+}
+.list--main li {
+  line-height: 2.5em;
+  &::before {
+    content: '▶︎';
+    margin-right: 0.5em;
+    font-size: 0.7em;
+    color: #8EA700;
+  }
+}
+
+span.mark {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #8EA700;
+}
+del {
+  color: #ccc;
+}
+span.added {
+  color: #8EA700;
+}
+
+
+.bullet--replace .bespoke-bullet {
+  display: none;
+}
+
+.bullet--replace .bespoke-bullet-current {
+  display: block;
+}
+
+.bullet--highlight .bespoke-bullet-current {
+  background-color: yellow;
+}
+
+.bullet--highlight .bespoke-bullet-inactive {
+  opacity: 1;
+}
+
+.heading h1 > span {
+  display: block;
+  text-align: center;
+  line-height: 2em;
+}
+
+.heading h1 b {
+}
+
+.heading h1 {
+  // color: #9ee9ec;
+}
+
+.heading p {
+  max-width: inherit;
+  text-align:center;
+  line-height: 1.5em;
+}
+
+.title__trans {
+  font-size: 0.7em;
+}
+
+.timeline time {
+  color: #247BA0;
+}
+.timeline {
+  color: #555;
+  margin-top: 6em;
+  margin-bottom: 4em;
+}
+
+.content-over {
+  padding: 2em;
+  background: rgba(255,255,255,0.9);
+  border-radius: 5px;
+}
+.content-over h2 {
+  text-align: center;
+}
+
+.html {
+  background-image: url(../images/look-son.jpg);
+  background-color: #ccc;;
+}
+
+
+.cover {
+  background-color: #50514F;
+}
+.cover--content h1 {
+  color: #FFe066;
+}
+.cover--content p {
+  color: #f6f6f6;
+}
+
+
+.changes {
+  background-color: #247BA0;
+}
+.changes--content h2 {
+  color: #FFE066;
+  font-size: 2em;
+}
+
+.maintenance {
+  background-color: #70C1B3;
+}
+.maintenance--content h2 {
+  color: #247BA0;
+  font-size: 2em;
+}
+
+
+.memes {
+  // background-image: url(../images/idpf-memes.jpg);
+  background-color: #70C1B3;
+  background-color: #FFE066;
+}
+
+.bff {
+  background-image: url(../images/bff.png);
+  background-color: pink;
+}
+
+.needyou {
+  background-image: url(../images/need-you.png);
+  background-color: pink;
+}
+.needyou--content h2 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 220px;
+  margin-left: -125px;
+  margin-bottom: 1em;;
+  padding: 2em;
+  background: #161640;
+  border: 2px solid red;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+}
+.feedback--content table {
+  margin-bottom: 1em;
+}
+.feedback--content td {
+  padding: 0 20px;
+  text-align: center;
+}
+.feedback--content td:before {
+  content: ' ';
+  text-align:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  border: 1px solid #ccc;
+  // position:relative;
+  display:block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+#markus:before {
+  background-image: url(../images/markus.png);
+  background-position: 5px 2px;
+  background-size: 80px 120px;
+}
+#tzviya:before {
+  background-image: url(../images/tzviya.jpg);
+  // background-size: cover;
+}
+
+.summit {
+  background-color: #FFE066;
+}
+.summit--content h2 {
+  color:#F25F5C;
+}
+.summit--content p {
+  color:#50514F;
+}
+.summit--content a {
+  color:#247BA0;
+}
+
+.thanks {
+  background-color: #50514F;
+}
+.thanks--content h2 {
+  color: #FFE066;
+}
+.thanks--content p {
+  font-size: 1.2em;
+  color: #f6f6f6;
+}
+.conclusion {
+  font-size: 1.5em;
+  font-weight: bold;
+}

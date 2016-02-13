@@ -1,0 +1,7 @@
+{
+  "name": "presentation-epub-3.1-standard-update",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
