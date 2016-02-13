@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- 
+Image credits:
+- BFF "Appledash" by teiptr – CC BY 3.0
+  http://jackiephantom13.deviantart.com/art/Appledash-332564658
+- We Need You "Uncle Sam Pointint Finger" – Public Domain
+  https://commons.wikimedia.org/wiki/File:Uncle_Sam_(pointing_finger).jpg
+ -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>EPUB 3.1: Standard Update</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article>
+      <section data-bespoke-backdrop="cover" class="heading cover--content" style="">
+        <div class="heading__content">
+          <h1>
+            <span>EPUB 3.1</span>
+            <!-- <span class="title__trans">to become an</span> -->
+            <span>Standard Update</span>
+          </h1>
+          <p>Romain Deltour – DAISY<br/>
+             XML Prague 2016</p>
+        </div>
+      </section>
+      
+      <section>
+        <h2>What is EPUB?</h2>
+        <p>A <b>distribution</b> and <b>interchange</b> format standard for digital publications and documents, developped by <b>IDPF</b>.</p>
+        <blockquote>A (static) website in a ZIP</blockquote>
+      </section>
+
+      <section>
+        <h2 class="bullet">A brief history</h2>
+        <!-- <div /> -->
+        <ol class="timeline">
+          <li class="bullet"><time>1999</time> OEBPS</li>
+          <li class="bullet"><time>2001</time> OEBPS 1.1</li>
+          <li class="bullet"><time>2002</time> OEBPS 2.2</li>
+          <li class="bullet"><time>2005</time> EPUB begins</li>
+          <li class="bullet"><time>2007</time> EPUB 2.0</li>
+          <li class="bullet"><time>2010</time> EPUB 2.0.1</li>
+          <li class="bullet"><time>2011</time> EPUB 3</li>
+          <li class="bullet"><time>2014</time> EPUB 3.0.1</li>
+          <li class="bullet"><time>2015</time> EPUB 3.1</li>
+        </ol>
+        <p class="centered bullet important">Focus on <b>accessibility</b>. <br/>Convergence with the <b>web</b>.</p>
+        <p class="centered bullet important">Future: <a href="https://www.w3.org/TR/pwp/" style="display: inline;">W3C Portable Web Publications</a>?</p>
+      </section>
+
+      <section data-bespoke-backdrop="memes">
+      <h2 style="color: #333;">@idpfmemes</h2>
+      <img src="images/idpf-memes.jpg" alt="">
+      </section>
+
+      <section>
+        <h2>The EPUB 3.1 revision</h2>
+          <ul class="bullet">
+            <li>Consolidation</li>
+            <li>Simplification</li>
+            <li>Alignment with the Web</li>
+            <li>Accessibility</li>
+          </ul>
+          <p class="bullet important">Agressive deadline: 2016!</p>
+      </section>
+
+      <!-- GIF slide with Ballmer? -->
+
+      <section class="bullet--replace">
+        <h2>Reorganization</h2>
+        <blockquote>One spec to rule them all</blockquote>
+        <a href="http://www.idpf.org/epub/31/spec/epub-spec.html">http://www.idpf.org/epub/31/spec/epub-spec.html</a>
+        <ul class="bullet">
+          <li style="visibility: hidden"></li>
+          <li>EPUB Open Container Format (OCF)</li>
+          <li>EPUB Publications</li>
+          <li>EPUB Content Documents (incl. Navigation Document)</li>
+          <li>EPUB Media Overlays</li>
+        </ul>
+        <ul class="bullet">
+          <li><span class="added">EPUB Specification</span></li>
+          <li>EPUB Open Container Format (OCF)</li>
+          <li>EPUB <del>Publication</del> <span class="added">Package (incl. Navigation Document)</span></li>
+          <li>EPUB Content Documents</li>
+          <li>EPUB Media Overlays</li>
+        </ul>
+      </section>
+
+      <section data-bespoke-backdrop="changes" class="changes--content">
+        <h2>Some Changes</h2>
+      </section>
+
+      <section data-bespoke-backdrop="html" class="html--content">
+        <span class="bullet" style="visibility: hidden"></span>
+        <div class="bullet content-over">
+          <h2>HTML Syntax</h2>
+          <ul class="list--main">
+            <li>Mandatory for Readin Systems</li>
+            <li>Optional for Authors</li>
+          </ul>
+        </div>
+        <!-- <img src="images/look-son.jpg" alt="Look son, no more 'X'!"> -->
+      </section>
+
+      <section>
+        <h2>Aria Role</h2>
+        <a href="https://www.w3.org/TR/dpub-aria-1.0/">https://www.w3.org/TR/dpub-aria-1.0/</a>
+        <ul class="list--main">
+          <li>Only option in HTML</li>
+          <li>Supersedes <code>epub:type</code></li>
+        </ul>
+      </section>
+
+      <section data-bespoke-backdrop="bff" class="bff--content">
+        <span class="bullet" style="visibility: hidden"></span>
+        <div class="content-over bullet">
+          <h2>Browser-Friendly Format</h2>
+          <ul class="list--main">
+            <li><b>Unzipped</b> ("exploded") publication</li>
+            <li>Alternative serialization of the <b>package description</b></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Metadata</h2>
+        <ul class="bullet list--unstyled">
+          <li><code>dc:identifier</code></li>
+          <li><code>dc:title</code></li>
+          <li><code>dc:language</code> <span class="mark">+</span></li>
+          <li><code>dc:type</code> <span class="mark">+</span></li>
+          <li><code>dc:creator</code> <span class="mark">*</span></li>
+          <li><code>dc:pubisher</code> <span class="mark">?</span></li>
+        </ul>
+        <p class="bullet important" style="text-align: center"><span class="mark">+</span><br/><span style="color: #50514F;">linked external records</span></p>
+      </section>
+
+      <section>
+        <h2>Accessibility</h2>
+        <ul class="list--main">
+          <li>Conformance to WCAG 2.0</li>
+          <li>Accessibility Profile</li>
+        </ul>
+      </section>
+
+      <section data-bespoke-backdrop="maintenance" class="maintenance--content">
+        <h2>Maintenance</h2>
+      </section>
+
+      <section>
+        <h3>Maintenance</h3>
+        <ul class="list--main">
+          <li><b>CSS</b> Profile cleanup</li>
+          <li><b>Scripting</b> clarification</li>
+          <li>New <b>Core Media Types</b></li>
+          <li><b>Foreign resource</b> fallbacks</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Removals</h2>
+        <ul class="list--main">
+          <li>NCX</li>
+          <li><code>guide</code> Package element</li>
+          <li><code>bindings</code> Package element</li>
+          <li><code>epub:*</code> HTML elements</li>
+        </ul>
+      </section>
+
+      <section data-bespoke-backdrop="needyou" class="needyou--content">
+        <h2>EPUB Needs You!</h2>
+      </section>
+
+      <section>
+        <h2>Please review</h2>
+        <ul class="list--main">
+          <li>First Editor's draft<br/><a href="http://www.idpf.org/epub/31/spec/epub-spec.html">http://www.idpf.org/epub/31/spec/epub-spec.html</a></li>
+          <li>EPUB 3.1 Changes <br/><a href="http://www.idpf.org/epub/31/spec/epub-changes.html">http://www.idpf.org/epub/31/spec/epub-changes.html</a></li>
+        </ul>
+      </section>
+
+      <section data-bespoke-backdrop="feedback" class="feedback--content">
+        <h2>How to provide feedback?</h2>
+        <ul class="list--main">
+          <li>GitHub issue tracker<a href="https://github.com/IDPF/epub-revision/issues">https://github.com/IDPF/epub-revision/issues</a></li>
+          <li>Mailing list<a href="mailto:epub-working-group@googlegroups.com">epub-working-group@googlegroups.com</a></li>
+          <li>Ask the chairs</li>
+        </ul>
+        <table>
+          <tr>
+            <td id="markus">Markus Gylling <a href="mailto:mgylling@idpf.org">mgylling@idpf.org</a></td>
+            <td id="tzviya">Tzviya Siegman <a href="mailto:tsiegman@wiley.com">tsiegman@wiley.com</a></td>
+          </tr>
+        </table>
+      </section>
+
+      <section  data-bespoke-backdrop="summit" class="summit--content">
+        <h2>EPUB Summit in Bordeaux</h2>
+        <p><a href="http://edrlab.org/edrlab/epub-summit/">http://edrlab.org/edrlab/epub-summit/</a></p>
+        <p class="important">April 7-8, 2016.</p>
+        <p>An IDPF / Readium / EDRLab event.</p>
+      </section>
+
+      <section   data-bespoke-backdrop="thanks" class="thanks--content">
+        <h2>Questions?</h2>
+        <p>@rdeltour</p>
+      </section>
+
+    </article>
+
+    <script src="build/build.js"></script>
+  </body>
+</html>
